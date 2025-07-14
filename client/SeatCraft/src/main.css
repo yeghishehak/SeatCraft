@@ -1,0 +1,13 @@
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    overflow-y: hidden;
+    width: 100vw;
+}

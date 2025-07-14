@@ -1,0 +1,311 @@
+/* ALWAYS applied */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 700px;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 9999;
+
+  transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+
+  /* Start clean */
+  background-color: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+/* ONLY applied when scrollY > 0 */
+.headerScrolled {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid black;
+}
+
+/* ONLY applied when scrolling down */
+.hiddenHeader {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header.expanded {
+  background-color: blue;
+  height: 100vh;
+}
+
+
+.SeatCraftText {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    margin-left: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #FFFFFF, #898989);
+    filter: drop-shadow(0px 0px 8px black)
+}
+
+.linksDiv {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    margin-top: 45px;
+}
+
+.menuiconButton {
+    all: unset;
+    cursor: pointer;
+    position: relative; /* Required for absolute icons inside */
+    width: 32px;
+    height: 32px;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.3s ease;
+    fill: white;
+    filter: drop-shadow(0px 0px 4.8px black);
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menuicon {
+    fill: white;
+    filter: drop-shadow(0px 0px 4.8px black);
+}
+
+.menuiconDiv {
+    display: none;
+}
+
+.navLink {
+    all: unset;
+    font-family: "Abyssinica SIL", Georgia, serif;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    color: #eaeaea;
+}
+
+.contact {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 50px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.contact:hover {
+    padding-right: 77px;
+    background-color: #50F3FF;
+    color: black;
+}
+
+.arrowright {
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s ease;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+.contact:hover .arrowright {
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+/* MOBILE VERSION MENU BAR */
+
+.menuOpen {
+    display: flex;
+    justify-content: center;
+}
+
+.linksDivOpenMenu {
+    position: absolute;
+    right: 50%;
+    transform: translate(39px, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    gap: 30px;
+}
+
+.navLinkOpenMenu {
+    all: unset;
+    font-family: "Abyssinica SIL", Georgia, serif;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navLinkOpenMenu:hover {
+    color: #c2c2c2;
+}
+
+.contactOpenMenu {
+    position: absolute;
+    transform: translate(-80px, 0);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 50px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+.contactOpenMenu:hover {
+    padding-right: 77px;
+    background-color: #50F3FF;
+    color: black;
+}
+
+.arrowrightOpenMenu {
+    opacity: 0;
+    position: absolute;
+    transform: translate(0, -2px);
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s ease;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+
+.contactOpenMenu:hover .arrowrightOpenMenu {
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+@media (min-width: 913px) {
+    html {
+        overflow-y: auto;
+    }
+
+    .linksDivOpenMenu {
+        display: none;
+    }
+
+    .header.expanded {
+        height: auto;
+        background-color: unset;
+    }
+}
+
+@media (max-width: 1366px) {
+    .contact {
+        padding-left: 33px;
+        padding-right: 33px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .contact:hover {
+        padding-right: 70px;
+    }
+}
+
+
+@media (max-width: 1452px) {
+    .header {
+        justify-content: unset;
+        gap: 0;
+    }
+
+    .linksDiv {
+        position: absolute;
+        right: 20px;
+    }
+}
+
+@media (max-width: 912px) {
+    .navLink {
+        display: none;
+    }
+
+    .menuiconDiv {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 45px;
+        filter: drop-shadow(0px 0px 4.8px black);
+    }
+}
+
+@Media (max-width: 356px) {
+    .SeatCraftText {
+        font-size: 36px;
+        margin-left: 10px;
+    }
+
+    .menuiconDiv {
+        top: 30px;
+    }
+}
+
+@media (max-width: 260px) {
+    .SeatCraftText {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
+    .menuiconDiv {
+        top: 25px;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}

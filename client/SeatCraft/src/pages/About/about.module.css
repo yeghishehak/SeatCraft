@@ -1,0 +1,156 @@
+.contentDiv {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+.textDiv {
+    padding: 50px;
+    margin-top: 50px;
+    max-width: 640px;
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.span {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #000000, #777777);
+    filter: drop-shadow(0px 0px 8px black)
+}
+
+.image {
+    padding: 10px;
+    width: 600px;
+    height: 600px;
+}
+
+@media (max-width: 1512px) {
+    .image {
+        width: 500px;
+        height: 500px;
+    }
+    .text {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1117px) {
+    .contentDiv {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 673px) {
+    .image {
+        width: 400px;
+        height: 400px;
+    }
+    .text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 523px) {
+    .text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 490px) {
+    .textDiv {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 361px) {
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 291px) {
+    .text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 269px) {
+    .title {
+        font-size: 35px;
+    }
+    .textDiv {
+        padding: 10px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
+
+
+/* ADVANTAGES */
+
+.advantagesDiv {
+    margin-top: 140px;
+}
+
+.advantages {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 40px;
+}
+
+.advantage {
+    width: 200px;
+    max-width: 200px;
+}
+
+.advantageImage {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.advantageTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.advantageText {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 244px) {
+    .advantages {
+        gap: 10px;
+        margin-top: 0;
+        padding: 0;
+    }
+    .advantage {
+        transform: scale(0.7);
+    }
+}

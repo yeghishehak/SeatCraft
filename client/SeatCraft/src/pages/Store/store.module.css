@@ -1,0 +1,60 @@
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.itemsImageContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.itemImage {
+    transform: translate(-1px, 0);
+}
+
+.itemImage {
+    width: 320px;
+    height: 430px;
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    border-radius: 10px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@media (max-width: 404px) {
+    .itemImage {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 300px) {
+    .itemImage {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 269px) {
+    .title {
+        font-size: 35px;
+    }
+}
