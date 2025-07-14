@@ -5,9 +5,3 @@ server/node_modules/
 # Optional: ignore environment files if you have them
 client/.env
 server/.env
-
-# Ignore build outputs if any
-client/dist/
-server/dist/
-client/build/
-server/build/
