@@ -24,7 +24,6 @@ function Header() {
       const currentScrollY = Math.max(window.scrollY, 0);
       const deltaY = currentScrollY - lastScrollY.current;
 
-      // Ignore small scroll jumps (like bounce)
       if (Math.abs(deltaY) < 5) {
         return;
       }
@@ -32,12 +31,9 @@ function Header() {
       setAtTop(currentScrollY <= 10);
 
       if (deltaY < 0) {
-        // Scrolling up
-        setShowHeader(true);
+        setShowHeader(true); // scrolling up
       } else if (deltaY > 0) {
-        // Scrolling down
-        setShowHeader(false);
-
+        setShowHeader(false); // scrolling down
         document.body.style.touchAction = "auto";
         document.documentElement.style.touchAction = "auto";
         document.documentElement.style.overflowY = "auto";
@@ -48,10 +44,14 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
+    // 👇 Force run on mount to avoid false atTop state
+    handleScroll();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   // Effect to manage touch-action based on menu state and screen size
 

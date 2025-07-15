@@ -9,7 +9,7 @@ function About({style, aboutText}) {
 
             <div className={styles.contentDiv}>
                 <div className={styles.imageDiv}>
-                    <img className={styles.image} src="/aboutImage.png" alt="About Image" />
+                    <img draggable="false" className={styles.image} src="/aboutImage.png" alt="About Image" />
                 </div>
 
                 <div className={styles.textDiv}>
@@ -22,25 +22,25 @@ function About({style, aboutText}) {
 
                 <div className={styles.advantages}>
                     <div className={styles.advantage}>
-                        <img className={styles.advantageImage} src="/advantages/advantage1.png" alt="Quality" />
-                        <h2 className={styles.advantageTitle}>High-Quality <br /> Materials</h2>
+                        <img draggable="false" className={styles.advantageImage} src="/advantages/advantage1.png" alt="Quality" />
+                        <h2 className={`${styles.advantageTitle} ${styles.advantageTitle1}`}>High-Quality <br /> Materials</h2>
                         <p className={styles.advantageText}>Made from durable wood, premium leather/fabric, and top-grade foam.</p>
                     </div>
 
                     <div className={styles.advantage}>
-                        <img className={styles.advantageImage} src="/advantages/advantage2.png" alt="Comfort" />
+                        <img draggable="false" className={styles.advantageImage} src="/advantages/advantage2.png" alt="Comfort" />
                         <h2 className={styles.advantageTitle}>Multy-<br /> Functional</h2>
                         <p className={styles.advantageText}>Reclining, adjustable, and foldable options for home, office, or outdoor use.</p>
                     </div>
 
                     <div className={styles.advantage}>
-                        <img className={styles.advantageImage} src="/advantages/advantage3.png" alt="Style" />
+                        <img draggable="false" className={styles.advantageImage} src="/advantages/advantage3.png" alt="Style" />
                         <h2 className={styles.advantageTitle}>Trusted By <br /> Thousands</h2>
                         <p className={styles.advantageText}>Excellent reviews and repeat customers nationwide.</p>
                     </div>
 
                     <div className={styles.advantage}>
-                        <img className={styles.advantageImage} src="/advantages/advantage4.png" alt="Customer Service" />
+                        <img draggable="false" className={styles.advantageImage} src="/advantages/advantage4.png" alt="Customer Service" />
                         <h2 className={styles.advantageTitle}>Affordable <br /> Prices</h2>
                         <p className={styles.advantageText}>Competitive rates without compromising on quality.</p>
                     </div>

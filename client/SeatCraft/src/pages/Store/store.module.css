@@ -38,11 +38,6 @@
     background-color: rgb(241, 241, 241);
     padding: 10px;
     border-radius: 10px;
-
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 @media (max-width: 404px) {
@@ -62,5 +57,12 @@
 @media (max-width: 269px) {
     .title {
         font-size: 35px;
+    }
+}
+
+@media (max-width: 224px) {
+    .itemImage {
+        width: 150px;
+        height: 200px;
     }
 }

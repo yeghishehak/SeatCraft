@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+.footer {
+    width: 100%;
+    background-color: #0004FF;
+    color: white;
+    height: auto;
+}
+
+.footerTop {
+    font-family: 'Inter' sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 300px;
+}
+
+.link {
+    all: unset;
+    cursor: pointer;
+}
+
+.footerBottom {
+    border-top: 2px solid black;
+    display: flex;
+    margin-top: 30px;
+}
+
+.footerBottomLeft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerBottomLeft h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    margin-left: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #FFFFFF, #898989);
+    filter: drop-shadow(0px 0px 8px black)
+}
+
+.footerBottomLeft p {
+    transform: translate(20px, 35px);
+}
+
+.footerBottomRight {
+    position: absolute;
+    display: flex;
+    transform: translate(0, 40px);
+    gap: 10px;
+    right: 10px;
+}
+
+.socialIcon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.tiktok {
+    transform: translate(0, -3px);
+}
+
+@media (max-width: 796px) {
+    .footerTop {
+        justify-content: unset;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footerBottomLeft h1 {
+        font-size: 40px;
+    }
+
+    .footerBottomLeft p {
+        transform: translate(20px, 25px);
+    }
+
+    .footerBottomRight {
+        transform: translate(0, 30px);
+    }
+}
+
+
+@media (max-width: 632px) {
+    .footerBottomLeft {
+        flex-direction: column;
+    }
+
+    .footerBottomLeft p {
+        transform: translate(0, -20px);
+        margin-left: 20px;
+    }
+
+    .footerBottomRight {
+        transform: translate(0, 50px);
+    }
+}
+
+@media (max-width: 580px) {
+    .socialIcon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 396px) {
+    .footerBottomLeft h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footerBottomLeft h1 {
+        font-size: 30px;
+    }
+
+    .footerBottomLeft p {
+        font-size: 10px;
+    }
+
+    .footerBottomRight {
+        transform: translate(0, 35px);
+    }
+}
+
+@media (max-width: 332px) {
+    .footerBottomRight {
+        transform: translate(0, 40px);
+    }
+    .socialIcon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media (max-width: 300px) {
+    .footerBottomLeft {
+        transform: translate(0, 5px);
+    }
+    .footerBottomLeft h1 {
+        margin-left: 5px;
+        font-size: 20px;
+    }
+
+    .footerBottomLeft p {
+        margin-left: 5px;
+        font-size: 8px;
+    } 
+    
+    .footerBottomRight {
+        transform: translate(0, 28px);
+    }
+
+    .socialIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 220px) {
+    .footerTop {
+        font-size: calc(100% - 20%);
+    }
+}

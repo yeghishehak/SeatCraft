@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 250px;
-    height: 100vh;
+    height: 80vh;
 }
 
 .image {
@@ -159,7 +159,7 @@
     }
 }
 
-@media (max-height: 768px) or (max-width: 851px) {
+@media (max-height: 954px) or (max-width: 851px) {
     .pageContainer {
         align-items: unset;
         margin-top: 150px;
