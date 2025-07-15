@@ -7,6 +7,10 @@ const contactRoutes = require('./routes/contact.js');
 const checkoutRoutes = require('./routes/checkout.js');
 
 const app = express();
+
+app.set('trust proxy', true);
+
+
 const PORT = process.env.PORT || 4242;
 
 // Define allowed origins for CORS
