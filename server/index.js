@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 
+const contactRoutes = require('./routes/contact.js');
 const checkoutRoutes = require('./routes/checkout.js');
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(express.json());
 
 // API routes
 app.use('/api', checkoutRoutes);  // Mount your Stripe route at /api
+app.use('/api', contactRoutes);   // Mount your contact route at /api
 
 // Serve React build static files
 app.use(express.static(path.join(__dirname, '../client/SeatCraft/dist')));

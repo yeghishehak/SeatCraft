@@ -1,0 +1,125 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 130px;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.contactFormTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contactForm {
+    width: 463px;
+    height: 100%;
+    padding-bottom: 40px;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10.4px black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameDiv, .emailDiv, .messageDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.input {
+    padding-bottom: 5px;
+}
+
+.input, .input:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button {
+    all: unset;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0022FF;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #006eff;
+    box-shadow: 0px 0px 10px #006eff;
+}
+
+@media (max-width: 330px) {
+    .contact {
+        justify-content: unset;
+    }
+    .nameDiv, .emailDiv, .messageDiv {
+        width: 90%;
+    }
+    .button {
+        width: 100%;
+    }
+}
+
+/* CONTACT INFO  */
+
+.contactInfoTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+}
+
+.contactInfoText {
+    font-size: 20px;
+    max-width: 300px;
+}
+
+.envelopeIcon {
+    width: 20px;
+    height: 20px;
+    transform: translate(0, 4px);
+}
+
+@media (max-width: 302px) {
+    .contactInfoTitle {
+        font-size: 40px;
+    }
+    .contactInfoText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 210px) {
+    .contactInfoTitle {
+        font-size: 30px;
+    }
+    .contactInfoText {
+        font-size: 14px;
+    }
+}
