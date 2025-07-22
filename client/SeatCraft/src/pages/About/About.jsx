@@ -1,13 +1,42 @@
 import styles from './about.module.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {useRef, useEffect} from 'react'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function About({style, aboutText}) {
+    const contentRef = useRef(null);
+
+
+
+    useEffect(() => {
+        const el = contentRef.current.children;
+
+        gsap.fromTo(
+        el,
+        { y: 100, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse",
+            },
+        }
+        );
+    }, []);
+
     return (
         <div className={styles.aboutDiv} style={style}>
             {aboutText &&
                 <h1 className={styles.title}>About Us</h1>
             }
 
-            <div className={styles.contentDiv}>
+            <div ref={contentRef} className={styles.contentDiv}>
                 <div className={styles.imageDiv}>
                     <img draggable="false" className={styles.image} src="/aboutImage.png" alt="About Image" />
                 </div>

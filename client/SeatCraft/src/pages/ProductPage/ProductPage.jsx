@@ -42,7 +42,7 @@ function ProductPage() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.imageDiv}>
-        <img className={styles.image} src={product.image} alt={product.name} />
+        <img className={styles.image} src={product.image} alt={product.name} draggable={false} />
       </div>
 
       <div className={styles.infoDiv}>
