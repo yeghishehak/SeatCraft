@@ -8,12 +8,18 @@
 }
 
 .title {
+    opacity: 0;
     font-family: 'Inter', sans-serif;
     font-size: 45px;
     text-align: center;
 }
 
+.imageDiv {
+    opacity: 0;
+}
+
 .textDiv {
+    opacity: 0;
     padding: 50px;
     margin-top: 50px;
     max-width: 640px;
@@ -128,6 +134,7 @@
 }
 
 .advantage {
+    opacity: 0;
     width: 200px;
     max-width: 200px;
 }

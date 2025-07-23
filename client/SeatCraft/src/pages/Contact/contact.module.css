@@ -14,6 +14,7 @@
 }
 
 .contactForm {
+    opacity: 0;
     width: 463px;
     height: 100%;
     padding-bottom: 40px;
@@ -89,6 +90,10 @@
 }
 
 /* CONTACT INFO  */
+
+.contactInfo {
+    opacity: 0;
+}
 
 .contactInfoTitle {
     font-family: 'Inter', sans-serif;

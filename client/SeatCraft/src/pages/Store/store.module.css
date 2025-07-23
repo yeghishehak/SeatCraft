@@ -1,4 +1,5 @@
 .title {
+    opacity: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 45px;
@@ -19,6 +20,10 @@
     max-width: 1200px;
     margin-top: 50px;
     gap: 50px;
+}
+
+.imagesLink {
+    opacity: 0;
 }
 
 .itemImage {
