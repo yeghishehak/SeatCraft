@@ -1,5 +1,9 @@
 import styles from "./contact.module.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact({ style }) {
   const [formData, setFormData] = useState({
@@ -43,8 +47,32 @@ function Contact({ style }) {
     setIsSubmitting(false);
   };
 
+  const contactRef = useRef(null)
+
+  useEffect(() => {
+    const contact = contactRef.current.children;
+
+    Array.from(contact).forEach((contactParts) => {
+      gsap.fromTo (
+        contactParts,
+        { opacity: 0, filter: "blur(10px)"},
+        {
+          opacity: 1,
+          duration: 0.7,
+          filter: "blur(0px)",
+          scrollTrigger: {
+            trigger: contactParts,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      )
+    })
+  })
+
   return (
-    <div className={styles.contact} style={style}>
+    <div ref={contactRef} className={styles.contact} style={style}>
       <div className={styles.contactForm}>
         <h1 className={styles.contactFormTitle}>Contact Us</h1>
         <form className={styles.form} onSubmit={handleSubmit}>

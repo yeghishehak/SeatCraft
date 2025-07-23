@@ -6,18 +6,22 @@ import {useRef, useEffect} from 'react'
 gsap.registerPlugin(ScrollTrigger);
 
 function About({style, aboutText}) {
+
     const contentRef = useRef(null);
 
+    const titleRef1 = useRef(null)
+    const titleRef2 = useRef(null)
 
+    const advantagesRef = useRef(null)
 
     useEffect(() => {
         const el = contentRef.current.children;
 
         gsap.fromTo(
         el,
-        { y: 100, opacity: 0 },
+        { x: -100, opacity: 0 },
         {
-            y: 0,
+            x: 0,
             opacity: 1,
             duration: 1,
             scrollTrigger: {
@@ -28,12 +32,55 @@ function About({style, aboutText}) {
             },
         }
         );
+
+        const title1 = titleRef1.current;
+        const title2 = titleRef2.current;
+
+        [title1, title2].forEach(el => {
+        gsap.fromTo(
+            el,
+            { opacity: 0, filter: "blur(10px)" },
+            {
+            opacity: 1,
+            filter: "blur(0px)",
+            scrollTrigger: {
+                trigger: el,
+                start: "top 90%",
+                end: "bottom 60%",
+                toggleActions: "play none none reverse",
+            }
+            }
+        );
+        });
+
+        const advantages = advantagesRef.current.children;
+
+        Array.from(advantages).forEach((advantage, index) => {
+        gsap.fromTo(
+            advantage,
+            { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            {
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.8,
+            delay: index * 0.15, // optional stagger-like effect
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: advantage,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+            }
+        );
+        });
+
     }, []);
 
     return (
         <div className={styles.aboutDiv} style={style}>
             {aboutText &&
-                <h1 className={styles.title}>About Us</h1>
+                <h1 ref={titleRef1} className={styles.title}>About Us</h1>
             }
 
             <div ref={contentRef} className={styles.contentDiv}>
@@ -47,9 +94,9 @@ function About({style, aboutText}) {
             </div>
 
             <div className={styles.advantagesDiv}>
-                <h1 className={styles.title}>Our Advantages</h1>
+                <h1 ref={titleRef2} className={styles.title}>Our Advantages</h1>
 
-                <div className={styles.advantages}>
+                <div ref={advantagesRef} className={styles.advantages}>
                     <div className={styles.advantage}>
                         <img draggable="false" className={styles.advantageImage} src="/advantages/advantage1.png" alt="Quality" />
                         <h2 className={`${styles.advantageTitle} ${styles.advantageTitle1}`}>High-Quality <br /> Materials</h2>
