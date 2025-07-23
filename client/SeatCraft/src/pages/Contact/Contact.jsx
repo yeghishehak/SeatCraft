@@ -69,7 +69,7 @@ function Contact({ style }) {
         }
       )
     })
-  })
+  }, [])
 
   return (
     <div ref={contactRef} className={styles.contact} style={style}>

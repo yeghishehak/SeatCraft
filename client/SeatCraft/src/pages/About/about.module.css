@@ -161,6 +161,6 @@
         padding: 0;
     }
     .advantage {
-        transform: scale(0.7);
+        transform: scale(0.7) !important;
     }
 }

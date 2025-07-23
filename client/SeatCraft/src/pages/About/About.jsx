@@ -56,9 +56,10 @@ function About({style, aboutText}) {
         const advantages = advantagesRef.current.children;
 
         Array.from(advantages).forEach((advantage, index) => {
+
         gsap.fromTo(
             advantage,
-            { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+            { opacity: 0, scale: 0.4, filter: "blur(10px)" },
             {
             opacity: 1,
             scale: 1,
