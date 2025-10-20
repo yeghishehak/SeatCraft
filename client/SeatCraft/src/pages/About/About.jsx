@@ -77,7 +77,7 @@ function About({style, aboutText}) {
         });
 
         const handleResize = () => {
-            ScrollTrigger.refreash();
+            ScrollTrigger.refresh();
         }
 
         window.addEventListener("resize", handleResize)
