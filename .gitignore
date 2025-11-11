@@ -3,5 +3,5 @@ client/node_modules/
 server/node_modules/
 
 # Optional: ignore environment files if you have them
-client/.env
+client/SeatCraft/.env
 server/.env
