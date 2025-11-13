@@ -76,16 +76,6 @@ function About({style, aboutText}) {
         );
         });
 
-        const handleResize = () => {
-            ScrollTrigger.refresh();
-        }
-
-        window.addEventListener("resize", handleResize)
-
-        return () => {
-            window.removeEventListener("resize", handleResize)
-        }
-
     }, []);
 
     return (

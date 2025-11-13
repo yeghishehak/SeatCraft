@@ -89,16 +89,6 @@ function Contact({ style }) {
         }
       )
     })
-
-      const handleResize = () => {
-          ScrollTrigger.refresh();
-      }
-
-      window.addEventListener("resize", handleResize)
-
-      return () => {
-          window.removeEventListener("resize", handleResize)
-      }
   }, [])
 
   return (
